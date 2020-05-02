@@ -1,0 +1,12 @@
+{
+  "name": "@ryanburnette/node-run",
+  "description": "Run a shell command in Node.js. Returns a Promise when done.",
+  "license": "ISC",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryanburnette/node-run.git"
+  },
+  "version": "1.1.2",
+  "author": "Ryan Burnette <ryan.burnette@gmail.com> (https://ryanburnette.com)"
+}

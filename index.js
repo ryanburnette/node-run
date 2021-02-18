@@ -1,7 +1,4 @@
-'use strict';
-
-var childProcess = require('child_process');
-var spawn = childProcess.spawn;
+var {spawn} = require('child_process')
 
 module.exports = function(cmd, _shell) {
   if (!_shell) {
@@ -11,10 +8,11 @@ module.exports = function(cmd, _shell) {
   return new Promise(function(resolve) {
     shell.stdin.end(cmd);
     shell.stdout.on('data', function(data) {
-      console.log(data.toString());
+      process.stdout.write(data.toString());
+      
     });
     shell.stderr.on('data', function(data) {
-      console.log(data.toString());
+      process.stderr.write(data.toString());
     });
     shell.on('exit', function() {
       resolve();
